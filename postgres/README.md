@@ -1,3 +1,5 @@
+# Docker image to create PostgreSQL server
+
 ## Build instructions
 
 Just build a regular Docker container, but you need to pass PostgreSQL's version number using the `PGVERSION` variable. Replace `<VERSION>` with the actual version number, such as `12` (default) or `13`.
