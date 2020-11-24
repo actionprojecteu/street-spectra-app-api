@@ -4,10 +4,10 @@
 CREATE TABLE public.ss_spectra (
 	id varchar NOT NULL,
 	username varchar(50) NULL, -- Username 
-	ts timestamptz NULL, -- UtC timestamp onservarion
-	heading int4 NULL, -- Heading in degrees of the spectrum from north
-	elevation int4 NULL, -- Elevation of the phtotograh in degrees
-	description varchar(250) NULL, -- Descriptio of the picture
+	ts timestamptz NULL, -- UTC observation timestamp
+	heading int4 NULL, -- Spectrum heading from North (degrees)
+	elevation int4 NULL, -- Picture elevation (degrees)
+	description varchar(250) NULL, -- Picture description
 	geom geometry NULL,
 	CONSTRAINT ss_spectra_pk PRIMARY KEY (id)
 );
@@ -15,10 +15,10 @@ CREATE TABLE public.ss_spectra (
 -- Column comments
 
 COMMENT ON COLUMN public.ss_spectra.username IS 'Username ';
-COMMENT ON COLUMN public.ss_spectra.ts IS 'UtC timestamp onservarion';
-COMMENT ON COLUMN public.ss_spectra.heading IS 'Heading in degrees of the spectrum from north';
-COMMENT ON COLUMN public.ss_spectra.elevation IS 'Elevation of the phtotograh in degrees';
-COMMENT ON COLUMN public.ss_spectra.description IS 'Descriptio of the picture';
+COMMENT ON COLUMN public.ss_spectra.ts IS 'UTC observation timestamp';
+COMMENT ON COLUMN public.ss_spectra.heading IS 'Spectrum heading from North (degrees)';
+COMMENT ON COLUMN public.ss_spectra.elevation IS 'Picture elevation (degrees)';
+COMMENT ON COLUMN public.ss_spectra.description IS 'Picture description';
 
 -- Permissions
 
